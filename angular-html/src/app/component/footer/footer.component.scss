@@ -1,0 +1,19 @@
+.footer-text {
+  line-height: 20px;
+  color: #666666;
+  padding: 35px 40px 35px 300px;
+  text-align: right;
+  white-space: nowrap;
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .footer-text {
+    padding: 20px 20px 20px 280px;
+  }
+}
+@media (max-width: 1199px) {
+  .footer-text {
+    padding-left: 20px;
+  }
+}

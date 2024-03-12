@@ -1,0 +1,36 @@
+<div class="login-wrapper">
+    <img src="./assets/images/login-banner.svg" alt="Login Banner" class="login-banner" />
+    <a href="#" title="Company" class="logo">
+        <img src="./assets/images/login-logo.svg" alt="Company" />
+    </a>
+    <div class="form-wrapper" data-aos="fade-up">
+        <h3>LOGIN</h3>
+        <p class="info-text">Please enter your credentials</p>
+        <mat-form-field appearance="outline" class="username-field">
+            <mat-label>Username</mat-label>
+            <input matInput>
+            <mat-icon matSuffix>
+                <img src="./assets/images/user-field-icon.svg" alt="User">
+            </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button color="primary" mat-icon-button matSuffix (click)=" hide=!hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon class="material-icons-outlined">
+                    <img
+                        [src]="hide ? './assets/images/show-password-icon.svg':'./assets/images/hide-password-icon.svg' " />
+                </mat-icon>
+            </button>
+        </mat-form-field>
+        <div class="action-wrapper">
+            <mat-checkbox color="primary">Remember me</mat-checkbox>
+            <a href=" #" title="Forgot Password?" class="primary-link">
+                Forgot Password?
+            </a>
+        </div>
+        <a mat-flat-button color="primary" routerLink="/dashboard" title="Sign In">Sign In</a>
+    </div>
+    <app-footer></app-footer>
+</div>

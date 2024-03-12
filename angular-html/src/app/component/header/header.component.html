@@ -1,0 +1,161 @@
+<header class="header">
+    <div class="logo-wrapper">
+        <a href="#" title="Company" class="logo">
+            <img [src]="desktopDevice?'./assets/images/logo.svg': mobileDevice ? './assets/images/mobile-logo.svg': './assets/images/logo-purple.svg'"
+                alt="Company">
+        </a>
+        <button mat-icon-button aria-label="Menu Icon" (click)="toggleMenu()" class="menu-btn">
+            <mat-icon>
+                <img [src]="tabletDevice ? './assets/images/menu-purple-icon.svg': './assets/images/menu-icon.svg'"
+                    alt="Menu">
+            </mat-icon>
+        </button>
+    </div>
+    <div class="search-wrapper">
+        <mat-form-field appearance="outline">
+            <input type="text" placeholder="Search Here...." aria-label="Search" matInput [formControl]="myControl"
+                [matAutocomplete]="auto">
+            <button mat-icon-button aria-label="Search Button" matSuffix>
+                <mat-icon>
+                    <img src="./assets/images/search-icon.svg" alt="Search">
+                </mat-icon>
+            </button>
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </div>
+    <div class="heading-right">
+        <button mat-icon-button aria-label="Search" class="search-btn" (click)="toggleSearch()">
+            <mat-icon>
+                <img src="./assets/images/search-dark-icon.svg" alt="Search">
+            </mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Notification" class="notifications-button">
+            <mat-icon matBadge="" matBadgeColor="warn">
+                <img src="./assets/images/notification-icon.svg" alt="Notification">
+            </mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" xPosition="before" class="notification-menu">
+            <div class="notification-header">
+                <h5>Notifications</h5>
+                <button mat-icon-button aria-label="Action">
+                    <mat-icon>
+                        <img src="./assets/images/action-icon.svg" alt="Notification">
+                    </mat-icon>
+                </button>
+            </div>
+            <div class="notification-items">
+                <button mat-menu-item class="checked">
+                    <i>
+                        <img src="./assets/images/user-profile-1.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>54 products was accepted by the Amazon</span>
+                        <em>April 28, 2016</em>
+                    </div>
+                </button>
+                <button mat-menu-item class="checked">
+                    <i>
+                        <img src="./assets/images/user-profile-2.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>3,643 tasks was moved to a new workflow</span>
+                        <em>March 13, 2014</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-3.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>23 task was returned from the workflow</span>
+                        <em>May 29, 2017</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-4.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>54 products was accepted by the Amazon</span>
+                        <em>October 30, 2017</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-5.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>243 products was returned from THD</span>
+                        <em>October 24, 2018</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-3.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>23 task was returned from the workflow</span>
+                        <em>May 29, 2017</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-4.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>54 products was accepted by the Amazon</span>
+                        <em>October 30, 2017</em>
+                    </div>
+                </button>
+                <button mat-menu-item>
+                    <i>
+                        <img src="./assets/images/user-profile-5.png" alt="Profile" />
+                    </i>
+                    <div class="content">
+                        <span>243 products was returned from THD</span>
+                        <em>October 24, 2018</em>
+                    </div>
+                </button>
+            </div>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="beforeMenu" aria-label="Profile Menu" class="profile-btn">
+            <img src="./assets/images/user-profile.png" alt="User Profile">
+            <span class="profile-text">
+                <span class="gretings-text">Welcome</span>
+                <span class="user-name">Alexander Rusk</span>
+            </span>
+            <img src="./assets/images/down-arrow-icon.svg" alt="Down Arrow">
+        </button>
+        <mat-menu #beforeMenu="matMenu" class="profile-menu" xPosition="before">
+            <button mat-menu-item>
+                <mat-icon>
+                    <img src="./assets/images/profile-icon.svg" alt="Profile">
+                </mat-icon>
+                <span>My Profile</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <img src="./assets/images/change-password-icon.svg" alt="Change Password">
+                </mat-icon>
+                <span>Change Password</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>
+                    <img src="./assets/images/setting-dark-icon.svg" alt="Setting">
+                </mat-icon>
+                <span>Setting</span>
+            </button>
+            <a mat-menu-item routerLink="/login" title="Logout">
+                <mat-icon>
+                    <img src="./assets/images/logout-icon.svg" alt="Logout">
+                </mat-icon>
+                <span>Logout</span>
+            </a>
+        </mat-menu>
+    </div>
+    <div class="search-overlay" (click)="removeSearchbar()"></div>
+</header>

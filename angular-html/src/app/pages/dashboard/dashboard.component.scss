@@ -1,0 +1,173 @@
+.secondary-row {
+  margin-bottom: 24px;
+}
+
+.statistics-card {
+  .mat-mdc-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      padding-top: 3px;
+    }
+    h6 {
+      padding-bottom: 10px;
+    }
+    .couinter-prefix {
+      display: flex;
+      align-items: center;
+    }
+    .icon {
+      height: 68px;
+      width: 68px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.red {
+        background-color: #f03b3d;
+      }
+      &.blue {
+        background-color: #0c4ffa;
+      }
+      &.purple {
+        background-color: #9101cf;
+      }
+      &.green {
+        background-color: #48a846;
+      }
+    }
+    .numbers,
+    .couinter-prefix {
+      font-size: 28px;
+      line-height: 34px;
+      padding-bottom: 0;
+      color: #333333;
+      font-weight: 600;
+    }
+  }
+}
+::ng-deep .data-chart-card {
+  .mat-mdc-select {
+    font-size: 14px;
+    line-height: 20px;
+    .mat-mdc-select-arrow {
+      svg {
+        background: url("../../../assets/images/chevron-down-icon.svg") center
+          no-repeat;
+        background-size: 16px;
+        path {
+          display: none;
+        }
+      }
+    }
+  }
+  .mat-mdc-select-value {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+  }
+  .mat-mdc-form-field.mat-form-field-appearance-outline {
+    .mdc-notched-outline__leading,
+    .mdc-notched-outline__notch,
+    .mdc-notched-outline__trailing {
+      border: none;
+    }
+    .mat-mdc-text-field-wrapper {
+      padding: 0 8px;
+    }
+    .mat-mdc-form-field-infix {
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+  }
+}
+
+.device-card {
+  .device-chart-outer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-height: 204px;
+    .progress-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      p {
+        font-size: 26px;
+        line-height: 32px;
+        font-weight: 600;
+        color: #333333;
+        padding-bottom: 4px;
+      }
+      span {
+        font-size: 12px;
+        line-height: 18px;
+        em {
+          font-weight: 500;
+          color: #d32f2f;
+        }
+      }
+    }
+  }
+  .mdc-icon-button {
+    margin: -14px;
+  }
+  .device-legends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 25px;
+    margin-top: auto;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .device-info {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+      }
+      p {
+        color: #333333;
+        padding-bottom: 0;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+  .mat-mdc-card-content {
+    padding: 26px 50px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+  .device-card {
+    .mat-mdc-card-content {
+      padding: 20px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .device-card {
+    .mat-mdc-card-content {
+      padding: 16px;
+    }
+  }
+}

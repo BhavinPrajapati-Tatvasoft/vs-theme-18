@@ -1,0 +1,156 @@
+<h3 class="page-heading" data-aos="fade-in">Dashboard</h3>
+<!-- Statistics Start -->
+<div class="row secondary-row">
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <div class="content">
+                    <h6>Text Deduction</h6>
+                    <div class="couinter-prefix">
+                        <span>$</span>
+                        <p class="numbers" [countUp]="5000" [reanimateOnClick]="false"></p>
+                    </div>
+                </div>
+                <i class="icon red">
+                    <img src="./assets/images/tax-deduction-icon.svg" alt="Text Deduction">
+                </i>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="100">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <div class="content">
+                    <h6>Order Received</h6>
+                    <div class="couinter-prefix">
+                        <p class="numbers" [countUp]="12000" [reanimateOnClick]="false"></p>
+                    </div>
+                </div>
+                <i class="icon blue">
+                    <img src="./assets/images/orders-received-icon.svg" alt="Order Received">
+                </i>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="200">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <div class="content">
+                    <h6>Revenue State</h6>
+                    <div class="couinter-prefix">
+                        <p class="numbers" [countUp]="8000" [reanimateOnClick]="false"></p>
+                    </div>
+                </div>
+                <i class="icon purple">
+                    <img src="./assets/images/revenue-state-icon.svg" alt="Revenue State">
+                </i>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-md-6 col-xxl-3" data-aos="fade-up" data-aos-delay="300">
+        <mat-card class="statistics-card">
+            <mat-card-content>
+                <div class="content">
+                    <h6>Items Orders</h6>
+                    <div class="couinter-prefix">
+                        <p class="numbers" [countUp]="10500" [reanimateOnClick]="false"></p>
+                    </div>
+                </div>
+                <i class="icon green">
+                    <img src="./assets/images/items-orders-icon.svg" alt="Items Orders">
+                </i>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- Statistics End -->
+
+<!-- Data Chart Start -->
+<div class="row secondary-row">
+    <div class="col-lg-7" data-aos="fade-up" data-aos-delay="400">
+        <mat-card class="data-chart-card">
+            <mat-card-header>
+                <mat-card-title>Data Chart</mat-card-title>
+                <mat-form-field appearance="outline">
+                    <mat-select value="november">
+                        <mat-option value="octomber">Octomber</mat-option>
+                        <mat-option value="november">November</mat-option>
+                        <mat-option value="december">December</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </mat-card-header>
+            <mat-card-content>
+                <canvas baseChart width="100%" [type]="'line'" [data]="lineChartData" [options]="lineChartOptions">
+                </canvas>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-5" data-aos="fade-up" data-aos-delay="500">
+        <mat-card class="device-card">
+            <mat-card-header>
+                <mat-card-title>Viewing From Devices</mat-card-title>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Action">
+                    <mat-icon>
+                        <img src="./assets/images/action-icon.svg" alt="Action">
+                    </mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="before">
+                    <button mat-menu-item>
+                        Item 1
+                    </button>
+                    <button mat-menu-item>
+                        Item 2
+                    </button>
+                    <button mat-menu-item>
+                        Item 3
+                    </button>
+                </mat-menu>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="device-chart-outer">
+                    <canvas id="devicesChart" aria-label="chart" role="img" width="100%"></canvas>
+                    <div class="progress-number">
+                        <p>45%</p>
+                        <span>Last Week <em>(-15%)</em></span>
+                    </div>
+                </div>
+                <ul class="device-legends">
+                    <li>
+                        <i class="device-icon">
+                            <img src="./assets/images/mobile-icon.svg" alt="Mobile">
+                        </i>
+                        <div class="device-info">
+                            <span>Mobile</span>
+                            <p>35%</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="device-icon">
+                            <img src="./assets/images/tablet-icon.svg" alt="Mobile">
+                        </i>
+                        <div class="device-info">
+                            <span>Tablet</span>
+                            <p>15%</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="device-icon">
+                            <img src="./assets/images/desktop-icon.svg" alt="Mobile">
+                        </i>
+                        <div class="device-info">
+                            <span>Desktop</span>
+                            <p>50%</p>
+                        </div>
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+<!-- Data Chart End -->
+
+<!-- Table Start -->
+<div data-aos="fade-up">
+    <app-table tableClass="mb-0"></app-table>
+</div>
+<!-- Table End -->

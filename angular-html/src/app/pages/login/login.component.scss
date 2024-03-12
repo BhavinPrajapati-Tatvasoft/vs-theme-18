@@ -1,0 +1,92 @@
+.login-wrapper {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px 16px;
+  .logo {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: middle;
+    align-self: baseline;
+    margin-left: 28px;
+    img {
+      display: block;
+    }
+  }
+  .login-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .form-wrapper {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25),
+      0px 1px 1px 0px rgba(255, 255, 255, 0.1) inset,
+      0px 30px 60px -30px rgba(0, 0, 0, 0.3);
+    max-width: 460px;
+    width: 100%;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+    h3,
+    .info-text {
+      text-align: center;
+    }
+    h3 {
+      padding-top: 4px;
+      padding-bottom: 10px;
+    }
+    .info-text {
+      font-size: 16px;
+      color: #777777;
+      padding-bottom: 32px;
+    }
+    .username-field {
+      margin-bottom: 20px;
+    }
+    .action-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0;
+      .primary-link {
+        color: #9101cf;
+        white-space: nowrap;
+      }
+    }
+    .mdc-button--unelevated {
+      width: 100%;
+    }
+  }
+}
+/* Responsive Media Queries
+--------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1399px) {
+}
+@media (max-width: 1199px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 576px) {
+  .login-wrapper {
+    padding: 24px 16px;
+    .logo {
+      margin-left: 8px;
+    }
+    .form-wrapper {
+      padding: 30px;
+      .info-text {
+        padding-bottom: 24px;
+      }
+    }
+  }
+}

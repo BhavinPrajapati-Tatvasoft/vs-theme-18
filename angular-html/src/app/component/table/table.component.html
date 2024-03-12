@@ -1,0 +1,73 @@
+<mat-card class="table-card {{tableClass}}">
+    <mat-card-header>
+        <mat-card-title>Data Table</mat-card-title>
+        <button mat-mini-fab color="primary" aria-label="Add">
+            <mat-icon>
+                <img src="./assets/images/add-icon.svg" alt="Add">
+            </mat-icon>
+        </button>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="table-responsive">
+            <table mat-table [dataSource]="dataSource" matSort>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+                </ng-container>
+
+                <!-- Address Column -->
+                <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                    <td mat-cell *matCellDef="let row"> {{row.address}} </td>
+                </ng-container>
+
+                <!-- Role Column -->
+                <ng-container matColumnDef="role">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Role </th>
+                    <td mat-cell *matCellDef="let row"> {{row.role}} </td>
+                </ng-container>
+
+                <!-- Email Column -->
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+                    <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+                </ng-container>
+
+                <!-- Status Column -->
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header class="status-head"> Status </th>
+                    <td mat-cell *matCellDef="let row">
+                        <span [class]="row.status" class="status">{{row.status}}</span>
+                    </td>
+                </ng-container>
+
+                <!-- Action Column -->
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef class="text-center">Action</th>
+                    <td mat-cell *matCellDef=" let row" class="text-center">
+                        <div class="action-wrapper">
+                            <button mat-icon-button aria-label="Delete">
+                                <mat-icon>
+                                    <img src="./assets/images/delete-icon.svg" alt="Delete">
+                                </mat-icon>
+                            </button>
+                            <button mat-icon-button aria-label="Edit">
+                                <mat-icon>
+                                    <img src="./assets/images/edit-icon.svg" alt="Edit">
+                                </mat-icon>
+                            </button>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+            </table>
+        </div>
+        <mat-paginator *ngIf="paginationEnabled" [pageSizeOptions]="[10, 15, 20, 25, 100]"
+            [selectConfig]="paginationSelectConfig" aria-label="Select page of users"></mat-paginator>
+    </mat-card-content>
+</mat-card>
