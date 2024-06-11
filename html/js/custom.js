@@ -61,7 +61,6 @@ $(document).ready(function () {
       labels: ["2018", "2019", "2020", "2021", "2022"],
       datasets: [
         {
-          label: "My First Dataset",
           data: [20, 55, 75, 35, 78],
           borderColor: "#48A846",
           pointBorderColor: "#48A846",
@@ -70,7 +69,6 @@ $(document).ready(function () {
           pointBackgroundColor: "#48A846",
         },
         {
-          label: "My First Dataset",
           data: [77, 19, 65, 85, 65],
           borderColor: "#2B9EB3",
           tension: 0.4,
@@ -85,6 +83,32 @@ $(document).ready(function () {
       plugins: {
         legend: {
           display: false,
+        },
+        tooltip: {
+          backgroundColor: "#333333",
+          yAlign: "bottom",
+          xAlign: "center",
+          displayColors: false,
+          cornerRadius: 18,
+          titleMarginBottom: 0,
+          titleSpacing: 0,
+          caretSize: 6,
+          caretPadding: 5,
+          titleFont: {
+            size: 0,
+            lineHeight: 0,
+          },
+          padding: {
+            top: 6,
+            bottom: 6,
+            left: 14,
+            right: 14,
+          },
+          bodyFont: {
+            size: 12,
+            lineHeight: "20px",
+            weight: "500",
+          },
         },
       },
       scales: {
@@ -177,6 +201,7 @@ $(document).ready(function () {
   $(".custom-select").select2({
     width: "100%",
     dropdownCssClass: "custom-select-menu",
+    laceholder: "This is my placeholder",
   });
   // CountUp
   $(".numbers").counterUp();
@@ -200,6 +225,50 @@ $(document).ready(function () {
     autoWidth: false,
     dom: '<"top">rt<"bottom"flip><"clear">',
     paging: false,
+  });
+
+  var dataTable2 = $("#datatable2").DataTable({
+    sort: false,
+    dom: '<"top">rt<"bottom custom-pagination"flip><"clear">',
+    filter: false,
+    info: true,
+    autoWidth: false,
+    pagingType: "full_numbers",
+    pageLength: 10,
+    order: [[0, ""]],
+    language: {
+      info: "_START_-_END_ of _TOTAL_",
+      paginate: {
+        first: false,
+        last: false,
+        previous:
+          '<img src="images/prev-active-icon.svg" class="active-icon" alt="Prev"/><img src="images/prev-disabled-icon.svg" class="default-icon" alt="Prev"/>',
+        next: '<img src="images/next-active-icon.svg" class="active-icon" alt="Next"/><img src="images/next-disabled-icon.svg" class="default-icon" alt="Next"/>',
+      },
+      lengthMenu: "",
+    },
+  });
+  let $paginationNav = $(".pagination-nav");
+  let $customPagination = $(".custom-pagination");
+  if ($paginationNav) {
+    $paginationNav.append($customPagination);
+  }
+  $paginationNav.prepend(`
+    <div class="datatable-length-custom">
+    <span class="pagination-label">Rows per page: </span>
+      <select class="paging-select" id="customLengthMenu">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+      </select>
+    </div>
+  `);
+  // Handle change in the custom length menu
+  $("#customLengthMenu").on("change", function () {
+    let pageLength = $(this).val();
+    let table = $("#datatable2").DataTable();
+    table.page.len(pageLength).draw();
   });
 
   // AOS Initialize

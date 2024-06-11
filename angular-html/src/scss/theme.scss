@@ -92,7 +92,10 @@ $angular-html-theme: mat.define-light-theme(
 @include mat.all-component-typographies($my-custom-typography-config);
 
 // --mdc-outlined-text-field-container-shape:"16px"
-
+:root {
+  --mdc-outlined-text-field-label-text-tracking: 0;
+  --mat-form-field-container-text-tracking: 0;
+}
 // Typography
 .mat-typography h3 {
   font-size: 28px;

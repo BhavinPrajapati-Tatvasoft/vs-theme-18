@@ -16,29 +16,181 @@
     <div class="wrapper">
         <!-- Header Start -->
         <header class="header">
-            <button type="button" class="btn icon-btn d-xxl-none menu-btn">
-                <img src="images/menu-icon.svg" alt="Manu" />
-            </button>
-            <a href="index.html" title="Logo" class="logo d-xxl-none">
-                <img src="images/mobile-logo.svg" alt="Logo" />
-            </a>
-            <input type="text" class="form-control" id="search" placeholder="Search..." />
-            <div class="action-wrapper">
-                <button type="button" class="btn icon-btn search-btn">
+            <div class="logo-wrapper">
+                <a href="#" title="Company" class="logo">
+                    <img src="images/logo.svg" alt="Logo" class="d-none d-xl-block" />
+                    <img src="images/logo-purple.svg" alt="Logo" class="d-none d-sm-block d-xl-none" />
+                    <img src="images/mobile-logo.svg" alt="Logo" class="d-block d-sm-none" />
+                </a>
+                <button type="button" class="btn icon-btn menu-btn">
+                    <img src="images/menu-icon.svg" alt="Menu" class="d-none d-xl-block" />
+                    <img src="images/menu-purple-icon.svg" alt="Menu" class="d-block d-xl-none" />
+                </button>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" class="form-control" placeholder="Search Here...." name="search" />
+                <button type="button" class="btn icon-btn">
+                    <img src="images/search-icon.svg" alt="Search" />
+                </button>
+            </div>
+            <div class="header-right">
+                <button type="button" class="search-btn btn icon-btn">
                     <img src="images/search-dark-icon.svg" alt="Search" />
                 </button>
-                <button type="button" class="btn icon-btn notification-btn">
-                    <span class="badge">5</span>
-                    <img src="images/notification-icon.svg" alt="Notification" />
-                </button>
-                <button type="button" class="btn icon-btn">
-                    <span class="badge">5</span>
-                    <img src="images/message-icon.svg" alt="Message" />
-                </button>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle notification-btn icon-btn" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="images/notification-icon.svg" alt="Notification" />
+                        <span class="badge"></span>
+                    </button>
+                    <div class="dropdown-menu notification-menu dropdown-menu-end">
+                        <div class="notification-header">
+                            <h5>Notifications</h5>
+                            <button type="button" class="btn">
+                                <img src="images/action-icon.svg" alt="Action" />
+                            </button>
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="dropdown-item checked" href="#">
+                                    <i>
+                                        <img src="images/user-profile-1.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>54 products was accepted by the Amazon</span>
+                                        <em>April 28, 2016</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item checked" href="#">
+                                    <i>
+                                        <img src="images/user-profile-2.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>3,643 tasks was moved to a new workflow</span>
+                                        <em>March 13, 2014</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-3.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>23 task was returned from the workflow</span>
+                                        <em>May 29, 2017</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-4.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>54 products was accepted by the Amazon</span>
+                                        <em>October 30, 2017</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-5.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>243 products was returned from THD</span>
+                                        <em>October 24, 2018</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-3.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>23 task was returned from the workflow</span>
+                                        <em>May 29, 2017</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-4.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>54 products was accepted by the Amazon</span>
+                                        <em>October 30, 2017</em>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <i>
+                                        <img src="images/user-profile-5.png" alt="Profile" />
+                                    </i>
+                                    <div class="content">
+                                        <span>243 products was returned from THD</span>
+                                        <em>October 24, 2018</em>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle profile-btn" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img src="images/user-profile.png" alt="User Profile" />
+                        <span class="profile-text">
+                            <span class="gretings-text">Welcome</span>
+                            <span class="user-name">Alexander Rusk</span>
+                        </span>
+                        <img src="images/down-arrow-icon.svg" alt="Down Arrow" />
+                    </button>
+                    <ul class="dropdown-menu profile-menu dropdown-menu-end">
+                        <li>
+                            <a class="dropdown-item" href="#" title="My Profile">
+                                <i>
+                                    <img src="images/profile-icon.svg" alt="My Profile" />
+                                </i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" title="Change Password">
+                                <i>
+                                    <img src="images/change-password-icon.svg" alt="Change Password" />
+                                </i>
+                                <span>Change Password</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#" title="Setting">
+                                <i>
+                                    <img src="images/setting-dark-icon.svg" alt="Setting" />
+                                </i>
+                                <span>Setting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="index.html" title="Logout">
+                                <i>
+                                    <img src="images/logout-icon.svg" alt="Logout" />
+                                </i>
+                                <span>Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <div class="mobile-search">
-            <input type="text" class="form-control" placeholder="Search" id="mobileSearch">
+            <input type="text" class="form-control" placeholder="Search" name="search-mobile" />
             <button mat-icon-button color="primary" class="search-icon-btn btn">
                 <img src="images/search-icon.svg" />
             </button>
@@ -48,111 +200,90 @@
 
         <!-- Sidebar Start -->
         <aside class="sidebar">
-            <div class="logo-wrapper">
-                <a href="index.html" title="Company" class="logo">
-                    <img src="images/logo.svg" alt="Company" />
-                </a>
-            </div>
-            <ul class="nav-list middle-list">
+            <ul class="navbar">
                 <li class="nav-item">
-                    <a class="nav-link" title="Dashboard" href="dashboard.html">
-                        <i class="icon-block">
-                            <img src="images/dashboard-default-icon.svg" alt="Dashboard" class="default-icon" />
-                            <img src="images/dashboard-active-icon.svg" alt="Dashboard" class="active-icon" />
+                    <a href="dashboard.html" title="Dashboard" class="nav-link" data-aos="fade-right">
+                        <i>
+                            <span>
+                                <img src="images/dashboard-primary-icon.svg" alt="Dashboard" />
+                                <img src="images/dashboard-default-icon.svg" alt="Dashboard" />
+                                <img src="images/dashboard-active-icon.svg" alt="Dashboard" />
+                            </span>
                         </i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item has-submenu">
-                    <a class="nav-link active" title="Product">
-                        <i class="icon-block">
-                            <img src="images/product-default-icon.svg" alt="Product" class="default-icon" />
-                            <img src="images/product-active-icon.svg" alt="Product" class="active-icon" />
-                        </i>
-                        <span>Product</span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="list-item">
-                            <a href="product.html" title="Product details" class="list-link">
-                                <img src="images/product-details-icon.svg" alt="Product details" />
-                                <span>Product details</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="innerpage.html" title="Product List" class="list-link">
-                                <img src="images/product-list-icon.svg" alt="Product List" />
-                                <span>Product List</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Report" href="#">
-                        <i class="icon-block">
-                            <img src="images/report-default-icon.svg" alt="Report" class="default-icon" />
-                            <img src="images/report-active-icon.svg" alt="Report" class="active-icon" />
-                        </i>
-                        <span>Report</span>
+                        <span class="nav-label">Dashboard</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Transaction" href="#">
-                        <i class="icon-block">
-                            <img src="images/transaction-default-icon.svg" alt="Transaction" class="default-icon" />
-                            <img src="images/transaction-active-icon.svg" alt="Transaction" class="active-icon" />
+                    <a href="innerpage.html" title="Pages" class="nav-link active" data-aos="fade-right"
+                        data-aos-delay="200">
+                        <i>
+                            <span>
+                                <img src="images/page-primary-icon.svg" alt="Pages" />
+                                <img src="images/page-default-icon.svg" alt="Pages" />
+                                <img src="images/page-active-icon.svg" alt="Pages" />
+                            </span>
                         </i>
-                        <span>Transaction</span>
+                        <span class="nav-label">Pages</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Email" href="#">
-                        <i class="icon-block">
-                            <img src="images/email-default-icon.svg" alt="Email" class="default-icon" />
-                            <img src="images/email-active-icon.svg" alt="Email" class="active-icon" />
+                    <a href="#" title="Mails" class="nav-link" data-aos="fade-right" data-aos-delay="300">
+                        <i>
+                            <span>
+                                <img src="images/email-primary-icon.svg" alt="Mails" />
+                                <img src="images/email-default-icon.svg" alt="Mails" />
+                                <img src="images/email-active-icon.svg" alt="Mails" />
+                            </span>
                         </i>
-                        <span>Email</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="nav-list bottom-list">
-                <li class="nav-item profile dropdown dropup">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="images/user-profile-img.svg" alt="Profile">
-                        <span class="content-block">
-                            <span class="user-name">Daizy Robert</span>
-                            <span class="role">Sales Manager</span>
-                        </span>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end profile-menu">
-                        <li>
-                            <a class="dropdown-item" href="#">Profile
-                                <img src="images/profile-icon.svg" alt="Profile" />
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="index.html">
-                                Logout
-                                <img src="images/logout-icon.svg" alt="Logout" />
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" title="Settings" href="#">
-                        <i class="icon-block">
-                            <img src="images/settings-default-icon.svg" alt="Settings" class="default-icon" />
-                            <img src="images/settings-active-icon.svg" alt="Settings" class="active-icon" />
-                        </i>
-                        <span>Settings</span>
+                        <span class="nav-label">Mails</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" title="Help" href="#">
-                        <i class="icon-block">
-                            <img src="images/help-default-icon.svg" alt="Help" class="default-icon" />
-                            <img src="images/help-active-icon.svg" alt="Help" class="active-icon" />
+                    <a href="#" title="Orders" class="nav-link" data-aos="fade-right" data-aos-delay="400">
+                        <i>
+                            <span>
+                                <img src="images/orders-primary-icon.svg" alt="Orders" />
+                                <img src="images/orders-default-icon.svg" alt="Orders" />
+                                <img src="images/orders-active-icon.svg" alt="Orders" />
+                            </span>
                         </i>
-                        <span>Help</span>
+                        <span class="nav-label">Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Calendar" class="nav-link" data-aos="fade-right" data-aos-delay="500">
+                        <i>
+                            <span>
+                                <img src="images/calendar-primary-icon.svg" alt="Calendar" />
+                                <img src="images/calendar-default-icon.svg" alt="Calendar" />
+                                <img src="images/calendar-active-icon.svg" alt="Calendar" />
+                            </span>
+                        </i>
+                        <span class="nav-label">Calendar</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Help" class="nav-link" data-aos="fade-right" data-aos-delay="600">
+                        <i>
+                            <span>
+                                <img src="images/help-primary-icon.svg" alt="Help" />
+                                <img src="images/help-default-icon.svg" alt="Help" />
+                                <img src="images/help-active-icon.svg" alt="Help" />
+                            </span>
+                        </i>
+                        <span class="nav-label">Help</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" title="Setting" class="nav-link" data-aos="fade-right" data-aos-delay="700">
+                        <i>
+                            <span>
+                                <img src="images/settings-primary-icon.svg" alt="Setting" />
+                                <img src="images/settings-default-icon.svg" alt="Setting" />
+                                <img src="images/settings-active-icon.svg" alt="Setting" />
+                            </span>
+                        </i>
+                        <span class="nav-label">Setting</span>
                     </a>
                 </li>
             </ul>
@@ -161,265 +292,612 @@
         <!-- Sidebar End -->
 
         <main class="main-content">
-            <h4 data-aos="fade-in">Innerpage</h4>
-            <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="page-heading" data-aos="fade-in">Innerpage</h3>
+            <div class="card table-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-header">
-                    <h6>Form Style</h6>
+                    <h6>Data Table</h6>
+                    <button type="button" class="btn add-btn">
+                        <img src="images/add-icon.svg" alt="Add" />
+                    </button>
                 </div>
                 <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table" id="datatable2">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Address</th>
+                                    <th>Role</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Eleanor Pena</td>
+                                    <td>94 Queens Road, Enfield, London, EN10 8KT</td>
+                                    <td>Finance</td>
+                                    <td>kenzi.lawson@example.com</td>
+                                    <td>
+                                        <div class="status danger">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marvin McKinney</td>
+                                    <td>313 Main Road, Sunderland, SR69 8TF</td>
+                                    <td>Human Resource Manager</td>
+                                    <td>felicia.reid@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Fox</td>
+                                    <td>1 Church Road, London, E3 5GP</td>
+                                    <td>Ux Designer</td>
+                                    <td>jessica.hanson@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Annette Black</td>
+                                    <td>787 Mill Lane, Bath, BA49 6DL</td>
+                                    <td>Senior Developer</td>
+                                    <td>tim.jennings@example.com</td>
+                                    <td>
+                                        <div class="status warning">
+                                            Pending
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bessie Cooper</td>
+                                    <td>2 New Street, Harrogate, HG76 8XV</td>
+                                    <td>Front End Developer</td>
+                                    <td>jackson.graham@example.com</td>
+                                    <td>
+                                        <div class="status warning">
+                                            Pending
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Esther Howard</td>
+                                    <td>Flat 4, 79 Chester Road, Exeter, EX96 1FY</td>
+                                    <td>Chief Executive Officer</td>
+                                    <td>nathan.roberts@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Eleanor Pena</td>
+                                    <td>94 Queens Road, Enfield, London, EN10 8KT</td>
+                                    <td>Finance</td>
+                                    <td>kenzi.lawson@example.com</td>
+                                    <td>
+                                        <div class="status danger">
+                                            Inactive
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marvin McKinney</td>
+                                    <td>313 Main Road, Sunderland, SR69 8TF</td>
+                                    <td>Human Resource Manager</td>
+                                    <td>felicia.reid@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Robert Fox</td>
+                                    <td>1 Church Road, London, E3 5GP</td>
+                                    <td>Ux Designer</td>
+                                    <td>jessica.hanson@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Annette Black</td>
+                                    <td>787 Mill Lane, Bath, BA49 6DL</td>
+                                    <td>Senior Developer</td>
+                                    <td>tim.jennings@example.com</td>
+                                    <td>
+                                        <div class="status warning">
+                                            Pending
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Bessie Cooper</td>
+                                    <td>2 New Street, Harrogate, HG76 8XV</td>
+                                    <td>Front End Developer</td>
+                                    <td>jackson.graham@example.com</td>
+                                    <td>
+                                        <div class="status warning">
+                                            Pending
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Esther Howard</td>
+                                    <td>Flat 4, 79 Chester Road, Exeter, EX96 1FY</td>
+                                    <td>Chief Executive Officer</td>
+                                    <td>nathan.roberts@example.com</td>
+                                    <td>
+                                        <div class="status success">
+                                            Active
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="action-btn">
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/edit-icon.svg" alt="Edit" />
+                                            </button>
+                                            <button type="button" class="btn icon-btn">
+                                                <img src="images/delete-icon.svg" alt="Delete" />
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pagination-nav"></div>
+                </div>
+            </div>
+            <div class="card form-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-body">
+                    <h4 class="heading-h4">Form Elements</h4>
+                    <!-- Single Column Start -->
+                    <div class="section-heading">
+                        <h5 class="heading-h5">One Column</h5>
+                    </div>
                     <div class="row secondary-row">
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="user-name" placeholder="Username" />
-                                <label for="user-name">Username</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                                <label for="name">Name</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea type="text" class="form-control" id="description" placeholder="Description"
-                                    rows="3"></textarea>
-                                <label for="description">Description</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email">
+                                <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-12">
+                            <div class="form-floating">
+                                <textarea name="textarea" class="form-control" id="textarea" rows="4"
+                                    placeholder="Textarea"></textarea>
+                                <label for="textarea">Textarea</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Column End -->
+
+                    <!-- Two Column Start -->
+                    <div class="section-heading mt-6">
+                        <h5 class="heading-h5">Two Column</h5>
+                    </div>
+                    <div class="row secondary-row">
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name1" placeholder="Name">
+                                <label for="name1">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email1" placeholder="Email">
+                                <label for="email1">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
                             <div class="form-floating">
                                 <select class="form-select" id="select1">
                                     <option selected>Select</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
                                 </select>
                                 <label for="select1">Select</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="row secondary-row">
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="username1" placeholder="Username" />
-                                <label for="username1">Username</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
+                        <div class="col-sm-6">
                             <div class="form-floating">
                                 <select class="form-select" id="select2">
                                     <option selected>Select</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
                                 </select>
-                                <label for="select2">Select Category</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="focus" placeholder="Focus" />
-                                <label for="focus">Focus</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="disabled" placeholder="Disabled" disabled />
-                                <label for="disabled">Disabled</label>
+                                <label for="select2">Select</label>
                             </div>
                         </div>
                     </div>
+                    <!-- Two Column End -->
+
+                    <!-- Three Column Start -->
+                    <div class="section-heading mt-6">
+                        <h5 class="heading-h5">Three Column</h5>
+                    </div>
                     <div class="row secondary-row">
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="username2" placeholder="Username" />
-                                <label for="username2">Username</label>
+                                <input type="text" class="form-control" id="name2" placeholder="Name">
+                                <label for="name2">Name</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-floating password-field">
-                                <input type="password" class="form-control password-input" id="password"
-                                    placeholder="Password" />
-                                <label for="password">Password</label>
-                                <button type="button" class="btn icon-btn password-btn">
-                                    <img src="images/hide-password-icon.svg" alt="Hide Password"
-                                        class="hide-password" />
-                                    <img src="images/show-password-icon.svg" alt="Show Password"
-                                        class="show-password" />
-                                </button>
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email2" placeholder="Email">
+                                <label for="email2">Email</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name3" placeholder="Name">
+                                <label for="name3">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
                             <div class="form-floating">
                                 <select class="form-select" id="select3">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
                                 </select>
                                 <label for="select3">Select</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="focus1" placeholder="Focus" />
-                                <label for="focus1">Focus</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-floating">
-                                <input type="text" class="form-control is-invalid" id="error" placeholder="Error" />
-                                <label for="error">Error</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="disabled1" placeholder="Disabled"
-                                    disabled />
-                                <label for="disabled1">Disabled</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="username3" placeholder="Username" />
-                                <label for="username3">Username</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating password-field">
-                                <input type="password" class="form-control password-input" id="password1"
-                                    placeholder="Password" />
-                                <label for="password1">Password</label>
-                                <button type="button" class="btn icon-btn password-btn">
-                                    <img src="images/hide-password-icon.svg" alt="Hide Password"
-                                        class="hide-password" />
-                                    <img src="images/show-password-icon.svg" alt="Show Password"
-                                        class="show-password" />
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating prefix-icon">
-                                <input type="text" class="form-control" id="amount" placeholder="Amount" />
-                                <label for="amount">Amount</label>
-                                <i class="icon">
-                                    <img src="images/dollar-icon.svg" alt="Dollar">
-                                </i>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="form-floating">
                                 <select class="form-select" id="select4">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
                                 </select>
                                 <label for="select4">Select</label>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
+                        <div class="col-sm-6 col-lg-4">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="focus2" placeholder="Focus" />
-                                <label for="focus2">Focus</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating">
-                                <input type="text" class="form-control is-invalid" id="error1" placeholder="Error" />
-                                <label for="error1">Error</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating">
-                                <input type="text" class="form-control" id="disabled2" placeholder="Disabled"
-                                    disabled />
-                                <label for="disabled2">Disabled</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 col-xxl-3">
-                            <div class="form-floating prefix-icon">
-                                <input type="text" class="form-control" id="discount" placeholder="Discount" />
-                                <label for="discount">Discount</label>
-                                <i class="icon">
-                                    <img src="images/percent-icon.svg" alt="Dollar">
-                                </i>
+                                <select class="form-select" id="select5">
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                </select>
+                                <label for="select5">Select</label>
                             </div>
                         </div>
                     </div>
-                    <h6>Upload :</h6>
-                    <div class="upload-btn">
-                        <div class="file-upload">
-                            <img src="images/upload-icon.svg" alt="Upload">
-                            <span>Upload</span>
-                        </div>
-                        <input type="file" />
+                    <!-- Three Column End -->
+
+                    <!-- Four Column Start -->
+                    <div class="section-heading mt-6">
+                        <h5 class="heading-h5">Four Column</h5>
                     </div>
-                    <h6 class="pb-2">Checkbox</h6>
+                    <div class="row secondary-row">
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name4" placeholder="Name">
+                                <label for="name4">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email3" placeholder="Email">
+                                <label for="email3">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name5" placeholder="Name">
+                                <label for="name5">Name</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email6" placeholder="Email">
+                                <label for="email6">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="select6">
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                </select>
+                                <label for="select6">Select</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="select7">
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                </select>
+                                <label for="select7">Select</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="select8">
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                </select>
+                                <label for="select8">Select</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4 col-xl-3">
+                            <div class="form-floating">
+                                <select class="form-select" id="select9">
+                                    <option selected>Select</option>
+                                    <option value="1">Item 1</option>
+                                    <option value="2">Item 2</option>
+                                </select>
+                                <label for="select9">Select</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Four Column End -->
+
+                    <!-- File Upload Start -->
+                    <h4 class="heading-h4 other-element-heading">Other Form Elements</h4>
+                    <div class="section-heading">
+                        <h5 class="heading-h5">File Upload</h5>
+                    </div>
+                    <div class="file-upload-outer">
+                        <div class="input-wrapper">
+                            <input type="file" id="file-upload" />
+                            <button type="button" class="btn btn-primary">
+                                <img src="images/file-upload-icon.svg" alt="File Upload" />
+                                <span>Upload</span>
+                            </button>
+                        </div>
+                        <p>No File Selected</p>
+                    </div>
+                    <!-- File Upload End -->
+
+                    <!-- Checkbox Start -->
+                    <div class="section-heading checkbox-heading">
+                        <h5 class="heading-h5">Checkboxes</h5>
+                    </div>
                     <div class="checkbox-outer">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="option1">
-                            <label class="form-check-label" for="option1">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheck1" checked />
+                            <label class="form-check-label" for="optionCheck1">
                                 Option 1
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="option2" checked>
-                            <label class="form-check-label" for="option2">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheck2" />
+                            <label class="form-check-label" for="optionCheck2">
                                 Option 2
                             </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheck3" />
+                            <label class="form-check-label" for="optionCheck3">
+                                Option 3
+                            </label>
+                        </div>
                     </div>
-                    <h6 class="pb-2">Radio Button</h6>
+                    <!-- Checkbox End -->
+
+                    <!-- Radio Button Start -->
+                    <div class="section-heading radio-heading">
+                        <h5 class="heading-h5">Radio Buttons</h5>
+                    </div>
                     <div class="radio-grp">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio" id="optionRadio1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="optionRadio1"
+                                checked />
                             <label class="form-check-label" for="optionRadio1">
                                 Option 1
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio" id="optionRadio2" checked>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="optionRadio2" />
                             <label class="form-check-label" for="optionRadio2">
                                 Option 2
                             </label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="optionRadio3" />
+                            <label class="form-check-label" for="optionRadio3">
+                                Option 3
+                            </label>
+                        </div>
                     </div>
-                    <h6 class="pb-3">CTA</h6>
+                    <!-- Radio Button End -->
+
+                    <!-- Buttons Start -->
+                    <div class="section-heading">
+                        <h5 class="heading-h5">Buttons</h5>
+                    </div>
                     <div class="btn-grp">
-                        <button type="button" class="btn btn-primary"><span>Primary</span></button>
-                        <button type="button" class="btn text-btn"><span>Secondary</span></button>
-                        <button type="button" class="btn btn-secondary"><span>Light</span></button>
+                        <button type="button" class="btn btn-primary">
+                            <span>Primary</span>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            <span>Secondary</span>
+                        </button>
                     </div>
-                    <h6 class="pb-3">Snackbar</h6>
+                    <!-- Buttons End -->
+
+                    <!-- Snackbar Start -->
+                    <div class="section-heading">
+                        <h5 class="heading-h5">Snackbar</h5>
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <img src="images/snackbar-error-icon.svg" alt="Danger" />
+                                <span>This is an error message!</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
                             <div class="alert alert-info alert-dismissible" role="alert">
-                                <img src="images/info-blue-icon.svg" alt="Info" />
-                                <span>This is info message.</span>
+                                <img src="images/snackbar-info-icon.svg" alt="Info" />
+                                <span>This is an information message!</span>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="alert alert-warning alert-dismissible" role="alert">
-                                <img src="images/info-yellow-icon.svg" alt="Info" />
-                                <span>This is warning message.</span>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                    aria-label="Close"></button>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="alert alert-danger alert-dismissible" role="alert">
-                                <img src="images/info-red-icon.svg" alt="Info" />
-                                <span>This is error message.</span>
+                                <img src="images/snackbar-warning-icon.svg" alt="Warning" />
+                                <span>This is a warning message!</span>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="alert alert-success alert-dismissible" role="alert">
-                                <img src="images/info-green-icon.svg" alt="Info" />
-                                <span>This is success message.</span>
+                                <img src="images/snackbar-success-icon.svg" alt="Success" />
+                                <span>This is a success message!</span>
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
                         </div>
                     </div>
-                    <h6 class="pb-3">Tabs</h6>
+                    <!-- Snackbar End -->
+
+                    <!-- Tabs Start -->
+                    <div class="section-heading mt-6">
+                        <h5 class="heading-h5">Tabs</h5>
+                    </div>
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-tab1-tab" data-bs-toggle="pill"
@@ -436,36 +914,31 @@
                                 data-bs-target="#pills-tab3" type="button" role="tab" aria-controls="pills-tab3"
                                 aria-selected="false">Tab 3</button>
                         </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-tab4-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-tab4" type="button" role="tab" aria-controls="pills-tab4"
-                                aria-selected="false">Tab 4</button>
-                        </li>
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-tab1" role="tabpanel"
                             aria-labelledby="pills-tab1-tab" tabindex="0">
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a more
-                            -or-less normal distribution of letters, as opposed to using 'Content here, content here',
-                            making it look like readable English. Many desktop publishing packages and web page editors
-                            now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
-                            many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).</div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum nisi, cras non congue
+                            amet, eu interdum. Purus vulputate odio eget curabitur porttitor tempus ipsum. Amet risus
+                            aenean tortor sed lacus, nunc. Velit semper ullamcorper at tortor pellentesque augue
+                            vehicula sed viverra. Quam sit adipiscing egestas etiam nunc adipiscing non luctus cursus.
+                            Pretium nunc, scelerisque mauris aliquet vulputate erat. Sem condimentum nullam pharetra ac
+                            sagittis. Vel nulla sed in pharetra. Sit mauris id id nascetur. Sem gravida euismod ac
+                            convallis.</div>
                         <div class="tab-pane fade" id="pills-tab2" role="tabpanel" aria-labelledby="pills-tab2-tab"
-                            tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda aperiam
+                            tabindex="0">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Assumenda aperiam
                             consequatur voluptatem, eos earum quasi at velit eum ea odit.
                         </div>
                         <div class="tab-pane fade" id="pills-tab3" role="tabpanel" aria-labelledby="pills-tab3-tab"
-                            tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam
+                            tabindex="0">Lorem ipsum
+                            dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam
                             sit laboriosam minus dolorem aperiam, itaque qui inventore sequi quas doloremque reiciendis,
                             fugiat nisi et? Deserunt, obcaecati debitis reprehenderit at quae, quaerat, quis ipsam
                             dolores mollitia corrupti ducimus laboriosam in.
                         </div>
-                        <div class="tab-pane fade" id="pills-tab4" role="tabpanel" aria-labelledby="pills-tab4-tab"
-                            tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, nulla!
-                        </div>
                     </div>
+                    <!-- Tabs End -->
                 </div>
             </div>
         </main>

@@ -28,7 +28,7 @@
                 </button>
             </div>
             <div class="search-wrapper">
-                <input type="text" class="form-control" placeholder="Search Here...." />
+                <input type="text" class="form-control" placeholder="Search Here...." name="search" />
                 <button type="button" class="btn icon-btn">
                     <img src="images/search-icon.svg" alt="Search" />
                 </button>
@@ -152,7 +152,7 @@
                         </span>
                         <img src="images/down-arrow-icon.svg" alt="Down Arrow" />
                     </button>
-                    <ul class="dropdown-menu profile-menu">
+                    <ul class="dropdown-menu profile-menu dropdown-menu-end">
                         <li>
                             <a class="dropdown-item" href="#" title="My Profile">
                                 <i>
@@ -178,7 +178,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#" title="Logout">
+                            <a class="dropdown-item" href="index.html" title="Logout">
                                 <i>
                                     <img src="images/logout-icon.svg" alt="Logout" />
                                 </i>
@@ -190,7 +190,7 @@
             </div>
         </header>
         <div class="mobile-search">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Search" name="search-mobile">
             <button mat-icon-button color="primary" class="search-icon-btn btn">
                 <img src="images/search-icon.svg" />
             </button>
@@ -214,7 +214,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" title="Pages" class="nav-link" data-aos="fade-right" data-aos-delay="200">
+                    <a href="innerpage.html" title="Pages" class="nav-link" data-aos="fade-right" data-aos-delay="200">
                         <i>
                             <span>
                                 <img src="images/page-primary-icon.svg" alt="Pages" />
@@ -291,7 +291,7 @@
         <!-- Sidebar End -->
 
         <main class="main-content">
-            <h3 class="page-heading">Dashboard</h3>
+            <h3 class="page-heading" data-aos="fade-in">Dashboard</h3>
             <div class="row">
                 <div class="col-md-6 col-xxl-3" data-aos="fade-up">
                     <div class="card statistics-card">
@@ -383,10 +383,10 @@
                                     aria-expanded="false">
                                     <img src="images/action-icon.svg" alt="Action" />
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" title="Item 1">Item 1</a></li>
-                                    <li><a class="dropdown-item" href="#" title="Item 2">Item 2</a></li>
-                                    <li><a class="dropdown-item" href="#" title="Item 3">Item 3</a></li>
+                                <ul class="dropdown-menu custom-menu">
+                                    <li><a class="dropdown-item" href="#" title="Item 1"><span>Item 1</span></a></li>
+                                    <li><a class="dropdown-item" href="#" title="Item 2"><span>Item 2</span></a></li>
+                                    <li><a class="dropdown-item" href="#" title="Item 3"><span>Item 3</span></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -431,7 +431,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card table-card">
+            <div class="card table-card" data-aos="fade-up" data-aos-delay="600">
                 <div class="card-header">
                     <h6>Data Table</h6>
                     <button type="button" class="btn add-btn">
@@ -447,7 +447,7 @@
                                     <th>Address</th>
                                     <th>Role</th>
                                     <th>Email</th>
-                                    <th class="text-center">Status</th>
+                                    <th>Status</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
@@ -457,7 +457,7 @@
                                     <td>94 Queens Road, Enfield, London, EN10 8KT</td>
                                     <td>Finance</td>
                                     <td>kenzi.lawson@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status danger">
                                             Inactive
                                         </div>
@@ -478,7 +478,7 @@
                                     <td>313 Main Road, Sunderland, SR69 8TF</td>
                                     <td>Human Resource Manager</td>
                                     <td>felicia.reid@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status success">
                                             Active
                                         </div>
@@ -499,7 +499,7 @@
                                     <td>1 Church Road, London, E3 5GP</td>
                                     <td>Ux Designer</td>
                                     <td>jessica.hanson@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status success">
                                             Active
                                         </div>
@@ -520,7 +520,7 @@
                                     <td>787 Mill Lane, Bath, BA49 6DL</td>
                                     <td>Senior Developer</td>
                                     <td>tim.jennings@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status warning">
                                             Pending
                                         </div>
@@ -541,7 +541,7 @@
                                     <td>2 New Street, Harrogate, HG76 8XV</td>
                                     <td>Front End Developer</td>
                                     <td>jackson.graham@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status warning">
                                             Pending
                                         </div>
@@ -562,7 +562,7 @@
                                     <td>Flat 4, 79 Chester Road, Exeter, EX96 1FY</td>
                                     <td>Chief Executive Officer</td>
                                     <td>nathan.roberts@example.com</td>
-                                    <td class="text-center">
+                                    <td>
                                         <div class="status success">
                                             Active
                                         </div>
